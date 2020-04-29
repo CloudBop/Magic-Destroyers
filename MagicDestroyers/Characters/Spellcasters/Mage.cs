@@ -5,8 +5,15 @@ namespace MagicDestroyers.Characters.Spellcasters
     using MagicDestroyers.Weapons.Blunt;
     public class Mage
     {
+        private const string DEFAULT_NAME = "Mage";
+        private const string DEFAULT_FACTION = "Spellcaster";
+        private const int DEFAULT_LEVEL = 1;
+        private const int DEFAULT_ABILITY_POINTS = 10;
+        private const int DEFAULT_HEALTH_POINTS = 10;
+        // const cannot be objects
+        private readonly Staff DEFAULT_WEAPON = new Staff();
+        private readonly ClothRobe DEFAULT_BODY_ARMOR = new ClothRobe();
         // fields
-        // 
         private string _faction;
         private string _name;
         // stats
@@ -18,7 +25,6 @@ namespace MagicDestroyers.Characters.Spellcasters
         private Staff _weapon;
 
         // properties
-        //
         public string Faction
         {
             get
@@ -123,22 +129,22 @@ namespace MagicDestroyers.Characters.Spellcasters
         //
         //
         public Mage()
-            : this("Mage", 1)
+            : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
         }
         public Mage(string name, int level)
-            : this(name, level, 10)
+            : this(name, level, DEFAULT_ABILITY_POINTS)
         {
         }
-        public Mage(string name, int healthPoints, int level)
+        public Mage(string name, int level, int abilityPoints)
         {
-            this._faction = "Spellcaster";
             this._name = name;
-            this._abilityPoints = 10;
-            this._healthPoints = healthPoints;
             this._level = level;
-            this._bodyArmor = new ClothRobe();
-            this._weapon = new Staff();
+            this._abilityPoints = abilityPoints;
+            this._healthPoints = DEFAULT_HEALTH_POINTS;
+            this._faction = DEFAULT_FACTION;
+            this._bodyArmor = DEFAULT_BODY_ARMOR;
+            this._weapon = DEFAULT_WEAPON;
         }
         
         public void ArcaneWrath()

@@ -6,6 +6,16 @@ namespace MagicDestroyers.Characters.Melees
 
     public class Warrior
     {
+        // Constants
+        private const string DEFAULT_NAME = "Warror";
+        private const string DEFAULT_FACTION = "Melee";
+        private const int DEFAULT_LEVEL = 1;
+        private const int DEFAULT_ABILITY_POINTS = 10;
+        private const int DEFAULT_HEALTH_POINTS = 10;
+        // const cannot be objects
+        private readonly Axe DEFAULT_WEAPON = new Axe();
+        private readonly Chainlink DEFAULT_BODY_ARMOR = new Chainlink();
+
         // fields
         //
         private string _faction;
@@ -119,22 +129,22 @@ namespace MagicDestroyers.Characters.Melees
         //
         // constructor
         public Warrior()
-            : this("Warrior", 1)
+            : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
         }
         public Warrior(string name, int level)
-            : this(name, level, 10)
+            : this(name, level, DEFAULT_ABILITY_POINTS)
         {
         }
-        public Warrior(string name, int healthPoints, int level)
+        public Warrior(string name, int level, int abilityPoints)
         {
-            this._faction = "Melee";
             this._name = name;
-            this._abilityPoints = 10;
-            this._healthPoints = healthPoints;
             this._level = level;
-            this._bodyArmor = new Chainlink();
-            this._weapon = new Axe();
+            this._abilityPoints = abilityPoints;
+            this._healthPoints = DEFAULT_HEALTH_POINTS;
+            this._faction = DEFAULT_FACTION;
+            this._bodyArmor = DEFAULT_BODY_ARMOR;
+            this._weapon = DEFAULT_WEAPON;
         }
         public void Strike()
         {

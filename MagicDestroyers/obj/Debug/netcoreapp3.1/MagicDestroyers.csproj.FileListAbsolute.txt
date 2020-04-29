@@ -1,0 +1,4 @@
+/Users/colinrowntree/RiderProjects/MagicDestroyers/MagicDestroyers/obj/Debug/netcoreapp3.1/MagicDestroyers.csprojAssemblyReference.cache
+/Users/colinrowntree/RiderProjects/MagicDestroyers/MagicDestroyers/obj/Debug/netcoreapp3.1/MagicDestroyers.csproj.CoreCompileInputs.cache
+/Users/colinrowntree/RiderProjects/MagicDestroyers/MagicDestroyers/obj/Debug/netcoreapp3.1/MagicDestroyers.AssemblyInfoInputs.cache
+/Users/colinrowntree/RiderProjects/MagicDestroyers/MagicDestroyers/obj/Debug/netcoreapp3.1/MagicDestroyers.AssemblyInfo.cs

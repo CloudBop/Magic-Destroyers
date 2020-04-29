@@ -1,4 +1,4 @@
-namespace MagicDestroyers
+namespace MagicDestroyers.Characters.Melees
 {
     using System;
     using MagicDestroyers.Armors.Mail;
@@ -6,6 +6,14 @@ namespace MagicDestroyers
 
     public class Knight
     {
+        private const string DEFAULT_NAME = "Knight";
+        private const string DEFAULT_FACTION = "Melee";
+        private const int DEFAULT_LEVEL = 1;
+        private const int DEFAULT_ABILITY_POINTS = 10;
+        private const int DEFAULT_HEALTH_POINTS = 10;
+        // const cannot be objects
+        private readonly Hammer DEFAULT_WEAPON = new Hammer();
+        private readonly Chainlink DEFAULT_BODY_ARMOR = new Chainlink();
         // fields
         // 
         private string _faction;
@@ -120,22 +128,22 @@ namespace MagicDestroyers
             set { this._weapon = value; }
         }
         public Knight()
-            : this("Knight", 1)
+            : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
         }
         public Knight(string name, int level)
-            : this(name, level, 10)
+            : this(name, level, DEFAULT_ABILITY_POINTS)
         {
         }
-        public Knight(string name, int healthPoints, int level)
+        public Knight(string name, int level, int abilityPoints)
         {
-            this._faction = "Melee";
             this._name = name;
-            this._abilityPoints = 10;
-            this._healthPoints = healthPoints;
             this._level = level;
-            this._bodyArmor = new Chainlink();
-            this._weapon = new Hammer();
+            this._abilityPoints = abilityPoints;
+            this._healthPoints = DEFAULT_HEALTH_POINTS;
+            this._faction = DEFAULT_FACTION;
+            this._bodyArmor = DEFAULT_BODY_ARMOR;
+            this._weapon = DEFAULT_WEAPON;
         }
         
         public void HolyBlow()
