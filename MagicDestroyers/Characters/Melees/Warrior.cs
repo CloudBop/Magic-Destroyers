@@ -160,5 +160,18 @@ namespace MagicDestroyers.Characters.Melees
         {
             throw new NotImplementedException();
         }
+        // example of static method
+        public static void logAllDefaultSettings(Warrior warrior)
+        {
+            // notice how Warrior instance has to be argument as readonly objects are on the class instance itself
+            Console.WriteLine($"default name:{DEFAULT_NAME}" +
+                              $"\ndefault level:{DEFAULT_LEVEL}" +
+                              $"\ndefault HP   :{DEFAULT_HEALTH_POINTS}" +
+                              $"\ndefault AP :{DEFAULT_ABILITY_POINTS}" +
+                              $"\ndefault Faction:{DEFAULT_FACTION}" +
+                              $"\ndefault Weapon:{warrior.DEFAULT_WEAPON}" +
+                              $"\ndefault Armor:{warrior.DEFAULT_BODY_ARMOR}"
+                              );
+        }
     }
 }
