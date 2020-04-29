@@ -23,13 +23,13 @@ namespace MagicDestroyers.Characters.Spellcasters
         {
             get
             {
-                return _faction;
+                return this._faction;
             }
             set
             {    // keyword: value 
                 if (value == "Melees"|| value == "Spellcasters")
                 {
-                    _faction = value;
+                    this._faction = value;
                 }
                 else
                 {
@@ -39,99 +39,110 @@ namespace MagicDestroyers.Characters.Spellcasters
         }
         public string Name
         {
-            get { return _name;}
+            get { return this._name;}
             set
             {
                 if (value.Length > 2 && value.Length <= 10)
                 {
-                    _name = value;
+                    this._name = value;
                 }
                 else
                 {
                     Console.WriteLine($"Invalid name: {value}" +
                                       $"\n Name should contain more than 3 characters and less than 11" +
                                       $"defaults to: Unknown");
-                    _name = "Unknown";
+                    this._name = "Unknown";
                 }
             }
         }
         // stats
         public int AbilityPoints
         {
-            get { return _abilityPoints; }
+            get { return this._abilityPoints; }
             set
             {
                 if (value >= 0)
                 {
-                    _abilityPoints = value;
+                    this._abilityPoints = value;
                 }
                 else
                 {
                     Console.WriteLine($"Invalid Number: {value} \n" +
                                       $"AbilityPoints must be greater than 0");
-                    _abilityPoints = 1;
+                    this._abilityPoints = 1;
                 }
             }
         }
         public int HealthPoints {
-            get { return _healthPoints; }
+            get { return this._healthPoints; }
             set
             {
                 if (value >= 0)
                 {
-                    _healthPoints = value;
+                    this._healthPoints = value;
                 }
                 else
                 {
                     Console.WriteLine($"Invalid Number: {value} \n" +
                                       $"HealthPoints must be greater than 0");
-                    _healthPoints = 1;
+                    this._healthPoints = 1;
                 }
             }
         }
         public int Level
         {
-            get { return _level; }
+            get { return this._level; }
             set
             {
                 if (value >= 0)
                 {
-                    _level = value;
+                    this._level = value;
                 }
                 else
                 {
                     Console.WriteLine($"Invalid Number: {value} \n" +
                                       $"_level must be greater than 0");
-                    _level = 1;
+                    this._level = 1;
                 }
             }
         }
         // equipment
         public LeatherVest BodyArmor
         {
-            get { return _bodyArmor; }
-            set { _bodyArmor = value; }
+            get { return this._bodyArmor; }
+            set { this._bodyArmor = value; }
         }
 
         public Staff Weapon
         {
-            get { return _weapon; }
-            set { _weapon = value; }
+            get { return this._weapon; }
+            set { this._weapon = value; }
+        }
+        
+        public Druid(string name, int healthPoints, int level)
+        {
+            this._faction = "Melee";
+            this._name = name;
+            this._abilityPoints = 10;
+            this._healthPoints = healthPoints;
+            this._level = level;
+            this._bodyArmor = new LeatherVest();
+            this._weapon = new Staff();
         }
         
         public void Moonfire()
         {
-
+            throw new NotImplementedException();
         }
         
         public void Starburst()
         {
-
+            throw new NotImplementedException();
         }
 
         public void OneWithNature()
         {
-            
+            throw new NotImplementedException();
         }
     }
 }

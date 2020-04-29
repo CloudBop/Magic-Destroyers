@@ -20,5 +20,9 @@ namespace MagicDestroyers.Armors.Cloth
                 }
             }
         }
+        public ClothRobe()
+        {
+            this._armorPoints = 10;
+        }
     }
 }

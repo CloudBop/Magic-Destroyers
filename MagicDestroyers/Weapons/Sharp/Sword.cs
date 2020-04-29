@@ -5,7 +5,6 @@ namespace MagicDestroyers.Weapons.Sharp
     public class Sword
     {
         private int _damage;
-
         public int Damage
         {
             get { return _damage; }
@@ -21,9 +20,13 @@ namespace MagicDestroyers.Weapons.Sharp
                 }
             }
         }
+        public Sword()
+        {
+            _damage = 10;
+        }
         public void Bloodthirst()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

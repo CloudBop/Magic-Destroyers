@@ -21,6 +21,10 @@ namespace MagicDestroyers.Weapons.Blunt
                 }
             }
         }
+        public Staff()
+        {
+            _damage = 10;
+        }
         public void Empower()
         {
 

@@ -19,6 +19,11 @@ namespace MagicDestroyers.Armors.Mail
                 }
             }
         }
+
+        public Chainlink()
+        {
+            this._armorPoints = 10;
+        }
         
     }
 }

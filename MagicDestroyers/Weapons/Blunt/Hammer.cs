@@ -22,9 +22,13 @@ namespace MagicDestroyers.Weapons.Blunt
             }
         }
         //
+        public Hammer()
+        {
+            _damage = 10;
+        }
         public void Stun()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

@@ -111,29 +111,40 @@ namespace MagicDestroyers.Characters.Spellcasters
         // equipment
         public LeatherVest BodyArmor
         {
-            get { return _bodyArmor; }
-            set { _bodyArmor = value; }
+            get { return this._bodyArmor; }
+            set { this._bodyArmor = value; }
         }
 
         public Sword Weapon
         {
-            get { return _weapon; }
-            set { _weapon = value; }
+            get { return this._weapon; }
+            set { this._weapon = value; }
+        }
+        
+        public Necromancer(string name, int healthPoints, int level)
+        {
+            this._faction = "Spellcaster";
+            this._name = name;
+            this._abilityPoints = 10;
+            this._healthPoints = healthPoints;
+            this._level = level;
+            this._bodyArmor = new LeatherVest();
+            this._weapon = new Sword();
         }
         
         public void ShadowRage()
         {
-
+            throw new NotImplementedException(); 
         }
 
         public void VampireTouch()
         {
-            
+            throw new NotImplementedException();
         }
 
         public void BoneShield()
         {
-            
+            throw new NotImplementedException();
         }
     }
 }

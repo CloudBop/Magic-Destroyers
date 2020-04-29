@@ -22,6 +22,10 @@ namespace MagicDestroyers.Weapons.Sharp
             }
         }
         //
+        public Axe()
+        {
+            _damage = 10;
+        }
         public void HackNSlash()
         {
 
