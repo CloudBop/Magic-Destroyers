@@ -161,9 +161,10 @@ namespace MagicDestroyers.Characters.Melees
             throw new NotImplementedException();
         }
         // example of static method
-        public static void logAllDefaultSettings(Warrior warrior)
+        public static void LogAllDefaultSettings(Warrior warrior)
         {
             // notice how Warrior instance has to be argument as readonly objects are on the class instance itself
+            // not ideal, static methods shouldn't need instance. only in rare cases
             Console.WriteLine($"default name:{DEFAULT_NAME}" +
                               $"\ndefault level:{DEFAULT_LEVEL}" +
                               $"\ndefault HP   :{DEFAULT_HEALTH_POINTS}" +
