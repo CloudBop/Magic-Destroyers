@@ -1,5 +1,6 @@
 namespace MagicDestroyers.Armors.Leather
 {
+    using System;
     public class LeatherVest
     {
         private int _armorPoints;
@@ -7,7 +8,19 @@ namespace MagicDestroyers.Armors.Leather
         public int ArmorPoints
         {
             get { return _armorPoints; }
-            set { _armorPoints = value; }
+            set
+            {
+                if(_armorPoints>0)
+                {
+                    _armorPoints = value;
+                }else
+                {
+                    Console.WriteLine($"ArmorPoints cannot be ${value}." +
+                                      $"\n ArmorPoints has to be greater than 0" +
+                                      $"\n ArmorPoints default to 1");
+                    _armorPoints = 1;
+                }
+            }
         }
     }
 }
