@@ -1,5 +1,6 @@
 namespace MagicDestroyers.Characters.Melees
 {
+    using System;
     using MagicDestroyers.Armors.Leather;
     using MagicDestroyers.Weapons.Sharp;
     //
@@ -27,28 +28,84 @@ namespace MagicDestroyers.Characters.Melees
             }
             set
             {    // keyword: value 
-                _faction = value;
+                if (value == "Melees"|| value == "Spellcasters")
+                {
+                    _faction = value;
+                }
+                else
+                {
+                    Console.WriteLine($"the faction: \"{value}\" is not a valid faction, no default");
+                }
             }
         }
         public string Name
         {
             get { return _name;}
-            set { _name = value; }
+            set
+            {
+                if (value.Length > 2 && value.Length <= 10)
+                {
+                    _name = value;
+                }
+                else
+                {
+                    Console.WriteLine($"Invalid name: {value}" +
+                                      $"\n Name should contain more than 3 characters and less than 11" +
+                                      $"defaults to: Unknown");
+                    _name = "Unknown";
+                }
+            }
         }
         // stats
         public int AbilityPoints
         {
             get { return _abilityPoints; }
-            set { _abilityPoints = value; }
+            set
+            {
+                if (value >= 0)
+                {
+                    _abilityPoints = value;
+                }
+                else
+                {
+                    Console.WriteLine($"Invalid Number: {value} \n" +
+                                      $"AbilityPoints must be greater than 0");
+                    _abilityPoints = 1;
+                }
+            }
         }
         public int HealthPoints {
             get { return _healthPoints; }
-            set { _healthPoints = value; }
+            set
+            {
+                if (value >= 0)
+                {
+                    _healthPoints = value;
+                }
+                else
+                {
+                    Console.WriteLine($"Invalid Number: {value} \n" +
+                                      $"HealthPoints must be greater than 0");
+                    _healthPoints = 1;
+                }
+            }
         }
         public int Level
         {
-            get { return _healthPoints; }
-            set { _healthPoints = value; }
+            get { return _level; }
+            set
+            {
+                if (value >= 0)
+                {
+                    _level = value;
+                }
+                else
+                {
+                    Console.WriteLine($"Invalid Number: {value} \n" +
+                                      $"_level must be greater than 0");
+                    _level = 1;
+                }
+            }
         }
         // equipment
         public LeatherVest BodyArmor { 
@@ -61,6 +118,10 @@ namespace MagicDestroyers.Characters.Melees
             get { return _weapon; }
             set { _weapon = value; }
         }
+        
+        //
+        // Constructors Go Here
+        //
         
         public void Raze()
         {
