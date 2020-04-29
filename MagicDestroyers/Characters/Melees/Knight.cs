@@ -14,20 +14,54 @@ namespace MagicDestroyers
         private int _healthPoints;
         private int _level;
         // equipment
-        private Chainlink bodyArmor;
-        private Hammer weapon;
+        private Chainlink _bodyArmor;
+        private Hammer _weapon;
 
         // properties
         //
-        public string Faction { get; set; }
-        public string Name { get; set; }
+        public string Faction
+        {
+            get
+            {
+                return _faction;
+            }
+            set
+            {    // keyword: value 
+                _faction = value;
+            }
+        }
+        public string Name
+        {
+            get { return _name;}
+            set { _name = value; }
+        }
         // stats
-        public int AbilityPoints { get; set; }
-        public int HealthPoints { get; set; }
-        public int Level { get; set; }
+        public int AbilityPoints
+        {
+            get { return _abilityPoints; }
+            set { _abilityPoints = value; }
+        }
+        public int HealthPoints {
+            get { return _healthPoints; }
+            set { _healthPoints = value; }
+        }
+        public int Level
+        {
+            get { return _healthPoints; }
+            set { _healthPoints = value; }
+        }
         // equipment
-        public Chainlink BodyArmor { get; set; }
-        public Hammer Weapon { get; set; }
+        public Chainlink BodyArmor
+        {
+            get { return _bodyArmor; }
+            set { _bodyArmor = value; }
+        }
+
+        public Hammer Weapon
+        {
+            get { return _weapon; }
+            set { _weapon = value; }
+        }
         
         public void HolyBlow()
         {

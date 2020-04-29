@@ -4,6 +4,10 @@ namespace MagicDestroyers.Armors.Leather
     {
         private int _armorPoints;
 
-        public int ArmorPoints { get; set; }
+        public int ArmorPoints
+        {
+            get { return _armorPoints; }
+            set { _armorPoints = value; }
+        }
     }
 }
