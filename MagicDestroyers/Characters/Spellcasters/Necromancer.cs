@@ -103,6 +103,7 @@ namespace MagicDestroyers.Characters.Spellcasters
                 {
                     Console.WriteLine($"Invalid Number: {value} \n" +
                                       $"_level must be greater than 0");
+                    throw new ArgumentOutOfRangeException(string.Empty, "Inappropriate value! Level must be greater than 1!");
                     _level = 1;
                 }
             }
