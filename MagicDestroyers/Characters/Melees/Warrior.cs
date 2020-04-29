@@ -118,6 +118,14 @@ namespace MagicDestroyers.Characters.Melees
         }
         //
         // constructor
+        public Warrior()
+            : this("Warrior", 1)
+        {
+        }
+        public Warrior(string name, int level)
+            : this(name, level, 10)
+        {
+        }
         public Warrior(string name, int healthPoints, int level)
         {
             this._faction = "Melee";

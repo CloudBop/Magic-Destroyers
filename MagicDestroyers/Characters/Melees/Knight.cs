@@ -119,7 +119,14 @@ namespace MagicDestroyers
             get { return this._weapon; }
             set { this._weapon = value; }
         }
-        
+        public Knight()
+            : this("Knight", 1)
+        {
+        }
+        public Knight(string name, int level)
+            : this(name, level, 10)
+        {
+        }
         public Knight(string name, int healthPoints, int level)
         {
             this._faction = "Melee";

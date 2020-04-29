@@ -120,7 +120,17 @@ namespace MagicDestroyers.Characters.Spellcasters
             get { return this._weapon; }
             set { this._weapon = value; }
         }
-        
+        //
+        //
+        //
+        public Necromancer()
+            : this("Necromancer", 1)
+        {
+        }
+        public Necromancer(string name, int level)
+            : this(name, level, 10)
+        {
+        }
         public Necromancer(string name, int healthPoints, int level)
         {
             this._faction = "Spellcaster";

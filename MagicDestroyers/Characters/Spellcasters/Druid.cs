@@ -118,7 +118,14 @@ namespace MagicDestroyers.Characters.Spellcasters
             get { return this._weapon; }
             set { this._weapon = value; }
         }
-        
+        public Druid()
+            : this("Druid", 1)
+        {
+        }
+        public Druid(string name, int level)
+            : this(name, level, 10)
+        {
+        }
         public Druid(string name, int healthPoints, int level)
         {
             this._faction = "Melee";

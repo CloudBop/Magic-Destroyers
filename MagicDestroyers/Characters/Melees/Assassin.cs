@@ -122,6 +122,14 @@ namespace MagicDestroyers.Characters.Melees
         //
         // Constructors Go Here
         //
+        public Assassin()
+            : this("Assassin", 1)
+        {
+        }
+        public Assassin(string name, int level)
+            : this(name, level, 10)
+        {
+        }
         public Assassin(string name, int healthPoints, int level)
         {
             this._faction = "Melee";
