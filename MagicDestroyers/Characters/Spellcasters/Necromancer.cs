@@ -1,3 +1,5 @@
+using MagicDestroyers.Characters.Enumerations;
+
 namespace MagicDestroyers.Characters.Spellcasters
 {
     using System;
@@ -6,8 +8,8 @@ namespace MagicDestroyers.Characters.Spellcasters
 
     public class Necromancer
     {
-        private const string DEFAULT_NAME = "Druid";
-        private const string DEFAULT_FACTION = "Spellcaster";
+        private const string DEFAULT_NAME = "Necromancer";
+        private const Factions DEFAULT_FACTION = Factions.Spellcaster;
         private const int DEFAULT_LEVEL = 1;
         private const int DEFAULT_ABILITY_POINTS = 10;
         private const int DEFAULT_HEALTH_POINTS = 10;
@@ -16,7 +18,7 @@ namespace MagicDestroyers.Characters.Spellcasters
         private readonly LeatherVest DEFAULT_BODY_ARMOR = new LeatherVest();
         // fields
         // 
-        private string _faction;
+        private Factions _faction;
         private string _name;
         // stats
         private int _abilityPoints;
@@ -28,22 +30,15 @@ namespace MagicDestroyers.Characters.Spellcasters
 
         // properties
         //
-        public string Faction
+        public Factions Faction
         {
             get
             {
-                return _faction;
+                return this._faction;
             }
             set
             {    // keyword: value 
-                if (value == "Melees"|| value == "Spellcasters")
-                {
-                    _faction = value;
-                }
-                else
-                {
-                    Console.WriteLine($"the faction: \"{value}\" is not a valid faction, no default");
-                }
+                this._faction = value;
             }
         }
         public string Name

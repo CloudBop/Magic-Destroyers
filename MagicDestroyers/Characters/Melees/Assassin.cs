@@ -1,3 +1,5 @@
+using MagicDestroyers.Characters.Enumerations;
+
 namespace MagicDestroyers.Characters.Melees
 {
     using System;
@@ -7,7 +9,7 @@ namespace MagicDestroyers.Characters.Melees
     public class Assassin
     {
         private const string DEFAULT_NAME = "Assassin";
-        private const string DEFAULT_FACTION = "Melee";
+        private const Factions DEFAULT_FACTION = Factions.Melee;
         private const int DEFAULT_LEVEL = 1;
         private const int DEFAULT_ABILITY_POINTS = 10;
         private const int DEFAULT_HEALTH_POINTS = 10;
@@ -17,7 +19,7 @@ namespace MagicDestroyers.Characters.Melees
         
         // fields
         // 
-        private string _faction;
+        private Factions _faction;
         private string _name;
         // stats
         private int _abilityPoints;
@@ -29,7 +31,7 @@ namespace MagicDestroyers.Characters.Melees
 
         // properties
         //
-        public string Faction
+        public Factions Faction
         {
             get
             {
@@ -37,14 +39,7 @@ namespace MagicDestroyers.Characters.Melees
             }
             set
             {    // keyword: value 
-                if (value == "Melees"|| value == "Spellcasters")
-                {
-                    this._faction = value;
-                }
-                else
-                {
-                    Console.WriteLine($"the faction: \"{value}\" is not a valid faction, no default");
-                }
+                this._faction = value;
             }
         }
         public string Name

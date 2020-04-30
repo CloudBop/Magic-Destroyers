@@ -1,3 +1,5 @@
+using MagicDestroyers.Characters.Enumerations;
+
 namespace MagicDestroyers.Characters.Spellcasters
 {
     using System;
@@ -6,7 +8,7 @@ namespace MagicDestroyers.Characters.Spellcasters
     public class Mage
     {
         private const string DEFAULT_NAME = "Mage";
-        private const string DEFAULT_FACTION = "Spellcaster";
+        private const Factions DEFAULT_FACTION = Factions.Spellcaster;
         private const int DEFAULT_LEVEL = 1;
         private const int DEFAULT_ABILITY_POINTS = 10;
         private const int DEFAULT_HEALTH_POINTS = 10;
@@ -14,7 +16,7 @@ namespace MagicDestroyers.Characters.Spellcasters
         private readonly Staff DEFAULT_WEAPON = new Staff();
         private readonly ClothRobe DEFAULT_BODY_ARMOR = new ClothRobe();
         // fields
-        private string _faction;
+        private Factions _faction;
         private string _name;
         // stats
         private int _abilityPoints;
@@ -25,23 +27,16 @@ namespace MagicDestroyers.Characters.Spellcasters
         private Staff _weapon;
 
         // properties
-        public string Faction
+        public Factions Faction
         {
             get
             {
                 return this._faction;
             }
             set
-            {    // keyword: value 
-                if (value == "Melees"|| value == "Spellcasters")
-                {
-                    this._faction = value;
-                }
-                else
-                {
-                    // should throw an exception here
-                    Console.WriteLine($"the faction: \"{value}\" is not a valid faction, no default");
-                }
+            {
+                // keyword: value 
+                this._faction = value;
             }
         }
         public string Name
