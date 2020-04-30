@@ -1,4 +1,5 @@
 using MagicDestroyers.Characters.Enumerations;
+using MagicDestroyers.Characters.Interfaces;
 
 namespace MagicDestroyers.Characters.Spellcasters
 {
@@ -6,7 +7,7 @@ namespace MagicDestroyers.Characters.Spellcasters
     using MagicDestroyers.Armors.Leather;
     using MagicDestroyers.Weapons.Sharp;
 
-    public class Necromancer : Spellcaster
+    public class Necromancer : Spellcaster, CalculateMath
     {
         private const string DEFAULT_NAME = "Necromancer";
         private const Factions DEFAULT_FACTION = Factions.Spellcaster;
@@ -71,5 +72,8 @@ namespace MagicDestroyers.Characters.Spellcasters
         {
             throw new NotImplementedException();
         }
+
+        public int NumberA { get; set; }
+        public int NumberB { get; set; }
     }
 }
