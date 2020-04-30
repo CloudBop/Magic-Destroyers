@@ -6,8 +6,9 @@ namespace MagicDestroyers.Weapons.Blunt
     {
         
         public Staff()
+            :base()
         {
-            Damage = 10;
+        
         }
         public void Empower()
         {

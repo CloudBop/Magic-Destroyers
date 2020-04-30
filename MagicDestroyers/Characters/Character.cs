@@ -39,7 +39,6 @@ namespace MagicDestroyers.Characters
                 }
             }
         }
-        
         public int HealthPoints {
             get { return this._healthPoints; }
             set
@@ -72,6 +71,13 @@ namespace MagicDestroyers.Characters
                     this._level = 1;
                 }
             }
+        }
+        
+        //
+        protected Character(string name, int level)
+        {
+            this.Name = name;
+            this.Level = level;
         }
     }
 }

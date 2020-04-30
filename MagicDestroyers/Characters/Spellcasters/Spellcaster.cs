@@ -22,5 +22,12 @@ namespace MagicDestroyers.Characters.Spellcasters
                 }
             }
         }
+        protected Spellcaster(string name, int level, int manaPoints)
+            : base(name, level)
+        {
+            base.Name = name;
+            base.Level = level;
+            this.ManaPoints = manaPoints;
+        }
     }
 }

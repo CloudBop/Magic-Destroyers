@@ -4,7 +4,7 @@ namespace MagicDestroyers.Characters.Melees
 {
     public class Melee : Character
     {
-        protected int _abilityPoints;
+        private int _abilityPoints;
         public int AbilityPoints
         {
             get { return this._abilityPoints; }
@@ -21,6 +21,14 @@ namespace MagicDestroyers.Characters.Melees
                     this._abilityPoints = 1;
                 }
             }
+        }
+
+        protected Melee(string name, int level, int abilityPoints)
+            : base(name, level)
+        {
+            base.Name = name;
+            base.Level = level;
+            this.AbilityPoints = abilityPoints;
         }
     }
 }

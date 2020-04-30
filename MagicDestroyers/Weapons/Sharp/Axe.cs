@@ -6,8 +6,9 @@ namespace MagicDestroyers.Weapons.Sharp
     {
         //
         public Axe()
+            :base()
         {
-            Damage = 10;
+            
         }
         public void HackNSlash()
         {

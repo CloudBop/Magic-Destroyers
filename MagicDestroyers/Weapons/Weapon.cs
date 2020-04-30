@@ -3,7 +3,6 @@ namespace MagicDestroyers.Weapons
     public class Weapon
     {
         private int _damage;
-
         public int Damage
         {
             get { return _damage; }
@@ -18,6 +17,10 @@ namespace MagicDestroyers.Weapons
                     _damage = 1;
                 }
             }
+        }
+        protected Weapon()
+        {
+            this.Damage = 10;
         }
     }
 }

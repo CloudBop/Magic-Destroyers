@@ -48,12 +48,11 @@ namespace MagicDestroyers.Characters.Spellcasters
         {
         }
         public Necromancer(string name, int level, int manaPoints)
+            :base(name, level, manaPoints)
+
         {
-            this.Name = name;
-            this.Level = level;
-            this.ManaPoints = manaPoints;
-            this.HealthPoints = DEFAULT_HEALTH_POINTS;
-            this.Faction = DEFAULT_FACTION;
+            base.HealthPoints = DEFAULT_HEALTH_POINTS;
+            base.Faction = DEFAULT_FACTION;
             this._bodyArmor = DEFAULT_BODY_ARMOR;
             this._weapon = DEFAULT_WEAPON;
         }
