@@ -2,3 +2,11 @@
 /Users/colinrowntree/RiderProjects/MagicDestroyers/MagicDestroyers/obj/Debug/netcoreapp3.1/MagicDestroyers.csproj.CoreCompileInputs.cache
 /Users/colinrowntree/RiderProjects/MagicDestroyers/MagicDestroyers/obj/Debug/netcoreapp3.1/MagicDestroyers.AssemblyInfoInputs.cache
 /Users/colinrowntree/RiderProjects/MagicDestroyers/MagicDestroyers/obj/Debug/netcoreapp3.1/MagicDestroyers.AssemblyInfo.cs
+/Users/colinrowntree/RiderProjects/MagicDestroyers/MagicDestroyers/bin/Debug/netcoreapp3.1/MagicDestroyers.deps.json
+/Users/colinrowntree/RiderProjects/MagicDestroyers/MagicDestroyers/bin/Debug/netcoreapp3.1/MagicDestroyers.runtimeconfig.json
+/Users/colinrowntree/RiderProjects/MagicDestroyers/MagicDestroyers/bin/Debug/netcoreapp3.1/MagicDestroyers.runtimeconfig.dev.json
+/Users/colinrowntree/RiderProjects/MagicDestroyers/MagicDestroyers/bin/Debug/netcoreapp3.1/MagicDestroyers.dll
+/Users/colinrowntree/RiderProjects/MagicDestroyers/MagicDestroyers/bin/Debug/netcoreapp3.1/MagicDestroyers.pdb
+/Users/colinrowntree/RiderProjects/MagicDestroyers/MagicDestroyers/obj/Debug/netcoreapp3.1/MagicDestroyers.dll
+/Users/colinrowntree/RiderProjects/MagicDestroyers/MagicDestroyers/obj/Debug/netcoreapp3.1/MagicDestroyers.pdb
+/Users/colinrowntree/RiderProjects/MagicDestroyers/MagicDestroyers/obj/Debug/netcoreapp3.1/MagicDestroyers.genruntimeconfig.cache
