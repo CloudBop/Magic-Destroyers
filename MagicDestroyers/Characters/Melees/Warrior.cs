@@ -17,25 +17,7 @@ namespace MagicDestroyers.Characters.Melees
         // const cannot be objects
         private readonly Axe DEFAULT_WEAPON = new Axe();
         private readonly Chainlink DEFAULT_BODY_ARMOR = new Chainlink();
-
-        // fields
-        //
-        private Chainlink _bodyArmor;
-        private Axe _weapon;
-
-        // properties
-        // equipment
-        public Chainlink BodyArmor
-        {
-            get { return this._bodyArmor; }
-            set { this._bodyArmor = value; }
-        }
-        public Axe Weapon 
-        {
-            get { return this._weapon; }
-            set { this._weapon = value; }
-        }
-        //
+        
         // constructor
         public Warrior()
             : this(DEFAULT_NAME, DEFAULT_LEVEL)
@@ -50,20 +32,20 @@ namespace MagicDestroyers.Characters.Melees
         {
             base.HealthPoints = DEFAULT_HEALTH_POINTS;
             base.Faction = DEFAULT_FACTION;
-            this._bodyArmor = DEFAULT_BODY_ARMOR;
-            this._weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Weapon = DEFAULT_WEAPON;
         }
-        public void Strike()
+        public int Strike()
         {
             throw new NotImplementedException();
         }
 
-        public void Execute()
+        public int Execute()
         {
             throw new NotImplementedException();
         }
         
-        public void SkinHarden()
+        public int SkinHarden()
         {
             throw new NotImplementedException();
         }
@@ -80,6 +62,21 @@ namespace MagicDestroyers.Characters.Melees
                               $"\ndefault Weapon:{warrior.DEFAULT_WEAPON}" +
                               $"\ndefault Armor:{warrior.DEFAULT_BODY_ARMOR}"
                               );
+        }
+        //
+        public override int Attack()
+        {
+            return this.Strike();
+        }
+
+        public override int SpecialAttack()
+        {
+            return this.Execute();
+        }
+
+        public override int Defend()
+        {
+            return this.SkinHarden();
         }
     }
 }

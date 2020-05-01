@@ -1,6 +1,6 @@
 namespace MagicDestroyers.Armors
 {
-    public class Armor
+    public abstract class Armor
     {
         private int _armorPoints;
 

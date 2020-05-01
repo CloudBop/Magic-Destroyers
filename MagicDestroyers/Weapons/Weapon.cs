@@ -1,6 +1,6 @@
 namespace MagicDestroyers.Weapons
 {
-    public class Weapon
+    public abstract class Weapon
     {
         private int _damage;
         public int Damage

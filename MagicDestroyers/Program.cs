@@ -1,22 +1,46 @@
 ﻿using System;
+using System.Collections.Generic;
+using MagicDestroyers.Characters;
+using MagicDestroyers.Characters.Melees;
+using MagicDestroyers.Characters.Spellcasters;
 
 namespace MagicDestroyers
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
-
-            // TODOs
-            // - conditionally set fields, use default if none
-            // - add NotImplementedException to none implemented methods
-            // - add any Exceptions to property setters
+            WelcomeMessage();
+            // create warrior myFirstInstance = new Warrior();
+            List<Character> characters = new List<Character>()
+            {
+                new Warrior(),
+                new Mage(),
+                new Warrior(),
+                new Mage(),
+                new Warrior(),
+                new Mage(),
+            };
             //
-            // - add initialise constructors to characters, every class?
-            // - add default constructors
-            // 3 constructors per class, change interface, use constructor chainning
-            // - add constants and readonly properties. - remove all magic numbers/variables (Primitives)
+            List<Melee> meleeTeam = new List<Melee>();
+            List<Spellcaster> spellTeam = new List<Spellcaster>();
+            //
+            foreach (var character in characters)
+            {
+                if (character is Melee)
+                {
+                    meleeTeam.Add((Melee)character);
+                }
+                else if (character is Spellcaster)
+                {
+                    spellTeam.Add((Spellcaster)character);
+                }
+            }
+        }
+
+        static void WelcomeMessage()
+        {
+            Tools.ColorfulWriteLine("Welcome To Magic Destroyers", ConsoleColor.Blue);
         }
     }
 }

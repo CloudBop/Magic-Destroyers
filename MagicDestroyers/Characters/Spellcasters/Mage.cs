@@ -16,24 +16,6 @@ namespace MagicDestroyers.Characters.Spellcasters
         private readonly Staff DEFAULT_WEAPON = new Staff();
         private readonly ClothRobe DEFAULT_BODY_ARMOR = new ClothRobe();
         // equipment
-        private ClothRobe _bodyArmor;
-        private Staff _weapon;
-        
-        // equipment
-        public ClothRobe BodyArmor
-        {
-            get { return this._bodyArmor; }
-            set { this._bodyArmor = value; }
-        }
-
-        public Staff Weapon
-        {
-            get { return this._weapon; }
-            set { this._weapon = value; }
-        }
-        //
-        //
-        //
         public Mage()
             : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
@@ -48,23 +30,38 @@ namespace MagicDestroyers.Characters.Spellcasters
         {
             base.HealthPoints = DEFAULT_HEALTH_POINTS;
             base.Faction = DEFAULT_FACTION;
-            this._bodyArmor = DEFAULT_BODY_ARMOR;
-            this._weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Weapon = DEFAULT_WEAPON;
         }
         
-        public void ArcaneWrath()
+        public int ArcaneWrath()
         {
             throw new NotImplementedException();
         }
         
-        public void FireWall()
+        public int FireWall()
         {
             throw new NotImplementedException();
         }
         
-        public void Meditation()
+        public int Meditation()
         {
             throw new NotImplementedException();
+        }
+        
+        public override int Attack()
+        {
+            return this.ArcaneWrath();
+        }
+
+        public override int SpecialAttack()
+        {
+            return this.FireWall();
+        }
+
+        public override int Defend()
+        {
+            return this.Meditation();
         }
     }
 }

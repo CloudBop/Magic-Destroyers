@@ -1,14 +1,19 @@
 using System;
+using MagicDestroyers.Armors;
+using MagicDestroyers.Weapons;
 using MagicDestroyers.Characters.Enumerations;
+using MagicDestroyers.Characters.Interfaces;
 
 namespace MagicDestroyers.Characters
 {
-    public class Character
+    public abstract class Character : IAttack, IDefend
     {
-        private Factions _faction;
         private string _name;
         private int _healthPoints;
         private int _level;
+        private Factions _faction;
+        private Armor _bodyArmor;
+        private Weapon _weapon;
         
         public Factions Faction
         {
@@ -72,12 +77,27 @@ namespace MagicDestroyers.Characters
                 }
             }
         }
-        
+        public Armor BodyArmor
+        {
+            get { return this._bodyArmor; }
+            set { this._bodyArmor = value; }
+        }
+        public Weapon Weapon 
+        {
+            get { return this._weapon; }
+            set { this._weapon = value; }
+        }
         //
         protected Character(string name, int level)
         {
             this.Name = name;
             this.Level = level;
         }
+
+        public abstract int Attack();
+
+        public abstract int SpecialAttack();
+
+        public abstract int Defend();
     }
 }
